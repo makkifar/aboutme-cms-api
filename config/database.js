@@ -5,14 +5,11 @@ module.exports = ({ env }) => ({
       connector: "bookshelf",
       settings: {
         client: "postgres",
-        host: env(
-          "DATABASE_HOST",
-          "strapi-database.cnp6khwd2agw.eu-central-1.rds.amazonaws.com"
-        ),
+        host: env("DATABASE_HOST", "127.0.0.1"),
         port: env.int("DATABASE_PORT", 5432),
-        database: env("DATABASE_NAME", "strapi"),
+        database: env("DATABASE_NAME", "cms"),
         username: env("DATABASE_USERNAME", "postgres"),
-        password: env("DATABASE_PASSWORD", "awsiamptgrs92"),
+        password: env("DATABASE_PASSWORD", ""),
       },
       options: {
         ssl: false,
